@@ -1,0 +1,37 @@
+<div class="rows">
+    <div class="col m12">
+        <h2 class="center-align">Login</h2>
+        <div class="row">
+            <form name="loginForm" class="col s12" ng-submit="vm.login(vm.credentials)" novalidate>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" ng-model="vm.credentials.email">
+                        <label for="email">email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="pass" type="password" ng-model="vm.credentials.password">
+                        <label for="pass">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <p>
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="col m12">
+                        <p class="right-align">
+                            <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Login</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "angular-starter",
+  "version": "1.0.0",
+  "authors": [
+    "dilbadil <abdillah308@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "~1.4.7",
+    "toastr": "~2.1.2",
+    "ng-dialog": "~0.5.5",
+    "ng-lodash": "~0.3.0",
+    "angular-block-ui": "~0.2.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.7"
+  }
+}

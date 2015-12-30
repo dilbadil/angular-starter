@@ -1,0 +1,19 @@
+<nav class="teal navbar-fixed" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Pluto</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+            <a data-activates="slide-out" href="#" class="slide-out-btn">
+                <i class="material-icons">home</i>
+            </a>
+        </li>
+      </ul>
+
+        <ul id="slide-out" class="side-nav">
+            <li><a ng-if="appVm.isAuthorizedState('welcome')" ui-sref="welcome">Home</a></li>
+            <li><a ng-if="appVm.isAuthorizedState('dashboard')" ui-sref="dashboard">Dashboard</a></li>
+            <li><a ng-if="!appVm.currentUser" ui-sref="session.login">Login</a></li>
+            <li><a ng-if="!appVm.currentUser" ui-sref="registration">Registration</a></li>
+            <li><a ng-if="appVm.currentUser" ui-sref="session.logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
