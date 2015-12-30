@@ -1,6 +1,6 @@
 # README #
 
-This Pluto ui.
+This Angular starter project. You can use it as bootstrap for your application. Feel free to modify them as you need.
 
 ### Get started ###
 
