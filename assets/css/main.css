@@ -1,3 +1,14 @@
+/* overwrite default theme */
+.side-nav {
+    left: 0%;
+    width: 190px;
+}
+
+.container {
+    margin: 0 auto 0 320px;
+}
+
+/* general styles */
 .form-message {
   order: 3;
   position: relative;

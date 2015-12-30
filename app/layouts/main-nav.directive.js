@@ -16,11 +16,11 @@
     }
 
     function linkFunc(scope, element, attrs) {
-        var slideOutButton = $(element).find('.slide-out-btn');
-
-        slideOutButton.sideNav({
-            closeOnClick: true
-        });
+        // var slideOutButton = $(element).find('.slide-out-btn');
+        //
+        // slideOutButton.sideNav({
+        //     closeOnClick: true
+        // });
     }
 
 })();

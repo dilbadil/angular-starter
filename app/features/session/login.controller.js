@@ -5,7 +5,7 @@
     angular.module('app.session')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$state', '$scope', '$rootScope', 'AUTH_EVENTS', 'authService', 'ENV', 'notifier'];
+    LoginController.$inject = ['$state', '$scope', '$rootScope', 'authService', 'ENV', 'notifier'];
 
     /*
      * Controller of login module.
@@ -13,13 +13,12 @@
      * @param {object} $state
      * @param {object} $scope
      * @param {object} $rootScope
-     * @param {object} AUTH_EVENTS
      * @param {object} authService
      * @param {object} ENV
      * @param {object} notifier
      * @return this
      */
-    function LoginController($state, $scope, $rootScope, AUTH_EVENTS, authService, ENV, notifier) {
+    function LoginController($state, $scope, $rootScope, authService, ENV, notifier) {
         var vm = this;
 
         vm.credentials = {

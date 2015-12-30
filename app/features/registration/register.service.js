@@ -25,8 +25,7 @@
             var deffered = $q.defer();
 
             $http.post(ENV.API_URL + 'users', user)
-                .then(registerSuccessHandler)
-                .catch(registerErrorHandler);
+                .then(registerSuccessHandler, registerErrorHandler);
 
             /////////////////////////////////////////
 

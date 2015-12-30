@@ -5,18 +5,17 @@
     angular.module('app.registration')
         .controller('RegistrationController', RegistrationController);
 
-    RegistrationController.$inject = ['registerValidator', 'notifier', '$state', 'registerService'];
+    RegistrationController.$inject = ['notifier', '$state', 'registerService'];
 
     /*
      * It's a controller
      *
-     * @param {object} registerValidator
      * @param {object} notifier
      * @param {object} $state
      * @param {object} registerService
      * @return this
      */
-    function RegistrationController(registerValidator, notifier, $state, registerService) {
+    function RegistrationController(notifier, $state, registerService) {
         var vm = this;
 
         vm.username = "";
@@ -29,23 +28,17 @@
         //////////////////////
 
         function submit() {
-            var validation;
             var newUser = {};
             var registration;
 
-            validation  = registerValidator.validate(vm);
-            vm.message = validation.message;
+            newUser.username = vm.username;
+            newUser.email = vm.email;
+            newUser.password = vm.password;
 
-            if (validation.valid) {
-                newUser.username = vm.username;
-                newUser.email = vm.email;
-                newUser.password = vm.password;
+            registerService.register(newUser)
+                .then(registerSuccessHandler);
 
-                registerService.register(newUser)
-                    .then(registerSuccessHandler);
-            }
-
-            return validation.valid;
+            return ;
 
             ////////////////////////
 
